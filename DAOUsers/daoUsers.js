@@ -1,4 +1,6 @@
-let execute = require("../Queries/executeQueries");
+let execute = require("../Queries/executeQueries")
+const Cryptr = require('cryptr')
+const cryptr = new Cryptr('secret')
 
 function getUsers() {
   let promise = new Promise((res, rej) => {
@@ -9,6 +11,12 @@ function getUsers() {
   return promise;
 }
 
+function saveUser (objInfo){
+  const encryptedString = cryptr.encrypt(objInfo.pass)
+  console.log(encryptedString)
+}
+
 module.exports = {
-  getUsers
+  getUsers,
+  saveUser
 };

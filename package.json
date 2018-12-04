@@ -9,6 +9,8 @@
   "author": "ADC",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cryptr": "^4.0.2",
     "express": "^4.16.4",
     "mysql2": "^1.6.4"
   }
