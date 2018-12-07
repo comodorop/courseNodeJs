@@ -4,7 +4,7 @@ const cryptr = new Cryptr('secret')
 
 function getUsers() {
   let promise = new Promise((res, rej) => {
-    execute.executeSelect("SELECT * FROM users").then(msg => {
+    execute.executeSelect('SELECT * FROM users').then(msg => {
 	  res(msg)
     })
   })
